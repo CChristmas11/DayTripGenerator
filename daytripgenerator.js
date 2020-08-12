@@ -50,12 +50,35 @@ function randomRestaurant() {
 
 */
 
-let destination = ["New York, San Francisco, Baton Rouge, Florida"]
-let restaurants = ["McDonalds", "Fleming's", "Bertrand's", "Pappadeaux"]
-let transportation = ["Car", "Scooter", "Airplane", "Boat"]
-let entertainment = ["movies", "circus", "murder mystery dinner", "live music"]
+let destination = ["New York", "San Francisco", "Baton Rouge", "Tampa", "Denver", "Chicago"]
+let restaurant = ["McDonalds", "Fleming's", "Bertrand's", "Pappadeaux", "Burger King", "Prejean's"]
+let transportation = ["car", "scooter", "Airplane", "boat", "bus", "brain"]
+let entertainment = ["movies", "circus", "murder mystery dinner", "live music", "historical tour", "whale watching"]
 
-let RandomNumber = Math.floor(Math.random()*5);
+function chooseDestination() {
+    let randomNumber = Math.floor(Math.random()*destination.length);
+    console.log (destination[randomNumber]);
+}
+
+function chooseRestaurant() {
+    let randomNumber = Math.floor(Math.random()*restaurant.length);
+    console.log (restaurant[randomNumber]);
+}
+
+function chooseTransportation() {
+    let randomNumber = Math.floor(Math.random()*transportation.length);
+    console.log (transportation[randomNumber]);
+}
+
+function chooseEntertainment() {
+    let randomNumber = Math.floor(Math.random()*entertainment.length);
+    console.log (entertainment[randomNumber]);
+}
+
+chooseDestination();
+chooseRestaurant();
+chooseTransportation();
+chooseEntertainment();
 
 
 
