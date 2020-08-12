@@ -52,33 +52,48 @@ function randomRestaurant() {
 
 let destination = ["New York", "San Francisco", "Baton Rouge", "Tampa", "Denver", "Chicago"]
 let restaurant = ["McDonalds", "Fleming's", "Bertrand's", "Pappadeaux", "Burger King", "Prejean's"]
-let transportation = ["car", "scooter", "Airplane", "boat", "bus", "brain"]
-let entertainment = ["movies", "circus", "murder mystery dinner", "live music", "historical tour", "whale watching"]
+let transportation = ["car", "scooter", "Airplane", "boat", "bus", "train"]
+let entertainment = ["see a movie", "go to the circus", "attend a murder mystery dinner", "listen to live music", "take a historical tour", "go whale watching"]
 
 function chooseDestination() {
     let randomNumber = Math.floor(Math.random()*destination.length);
-    console.log (destination[randomNumber]);
+    return destination[randomNumber];
 }
 
 function chooseRestaurant() {
     let randomNumber = Math.floor(Math.random()*restaurant.length);
-    console.log (restaurant[randomNumber]);
+    return restaurant[randomNumber];
 }
 
 function chooseTransportation() {
     let randomNumber = Math.floor(Math.random()*transportation.length);
-    console.log (transportation[randomNumber]);
+    return transportation[randomNumber];
 }
 
 function chooseEntertainment() {
     let randomNumber = Math.floor(Math.random()*entertainment.length);
-    console.log (entertainment[randomNumber]);
+    return entertainment[randomNumber];
 }
 
-chooseDestination();
-chooseRestaurant();
-chooseTransportation();
-chooseEntertainment();
+let randomDestination = chooseDestination();
+let randomRestaurant = chooseRestaurant();
+let randomTransportation = chooseTransportation();
+let randomEntertainment = chooseEntertainment();
 
 
+let biography = "You are going to " + randomDestination + ". You will travel by " + randomTransportation + ". " +
+"While you are there, you will eat at " + randomRestaurant + ", and your entertainment will be to " +
+randomEntertainment + ".";
 
+alert (biography);
+
+let reselect = prompt("Are you happy with your itinerary? Type Y to keep it and N to generate a new one.");
+
+if (reselect === "Y" || "y") {
+    alert("Have a fun trip!");
+}
+else {
+    prompt("Are you sure you would like to generate a new trip?");
+        
+        
+    }  
