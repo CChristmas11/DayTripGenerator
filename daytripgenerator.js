@@ -50,6 +50,7 @@ function randomRestaurant() {
 
 */
 
+
 let destination = ["New York", "San Francisco", "Baton Rouge", "Tampa", "Denver", "Chicago"]
 let restaurant = ["McDonalds", "Fleming's", "Bertrand's", "Pappadeaux", "Burger King", "Prejean's"]
 let transportation = ["car", "scooter", "Airplane", "boat", "bus", "train"]
@@ -92,10 +93,14 @@ function chooseAgain() {
     return reselect; 
 }
 
-let satisfaction = chooseAgain();
+let satisfaction = "n";
+
+while (satisfaction !== "Y" || satisfaction !== "y") {
+    satisfaction = chooseAgain();
 
     if (satisfaction === "Y" || satisfaction === "y") {
         alert("Have a fun trip!");
+        break;
     }
     else if (satisfaction === "N" || satisfaction === "n") {
         let randomDestination = chooseDestination();
@@ -108,7 +113,8 @@ let satisfaction = chooseAgain();
         randomEntertainment + ".";
 
 alert (newbiography)
+console.log (newbiography)
     }
-        
+}   
        
 
