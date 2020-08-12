@@ -82,18 +82,33 @@ let randomEntertainment = chooseEntertainment();
 
 
 let biography = "You are going to " + randomDestination + ". You will travel by " + randomTransportation + ". " +
-"While you are there, you will eat at " + randomRestaurant + ", and your entertainment will be to " +
-randomEntertainment + ".";
+    "While you are there, you will eat at " + randomRestaurant + ", and your entertainment will be to " +
+    randomEntertainment + ".";
 
 alert (biography);
 
-let reselect = prompt("Are you happy with your itinerary? Type Y to keep it and N to generate a new one.");
-
-if (reselect === "Y" || "y") {
-    alert("Have a fun trip!");
+function chooseAgain() {
+    let reselect = prompt("Are you happy with your itinerary? Type Y to keep it and N to generate a new one.");
+    return reselect; 
 }
-else {
-    prompt("Are you sure you would like to generate a new trip?");
+
+let satisfaction = chooseAgain();
+
+    if (satisfaction === "Y" || satisfaction === "y") {
+        alert("Have a fun trip!");
+    }
+    else if (satisfaction === "N" || satisfaction === "n") {
+        let randomDestination = chooseDestination();
+        let randomRestaurant = chooseRestaurant();
+        let randomTransportation = chooseTransportation();
+        let randomEntertainment = chooseEntertainment();
+
+        let newbiography = "Your new itinery has you going to " + randomDestination + ". You will travel by " + randomTransportation + ". " +
+        "While you are there, you will eat at " + randomRestaurant + ", and your entertainment will be to " +
+        randomEntertainment + ".";
+
+alert (newbiography)
+    }
         
-        
-    }  
+       
+
